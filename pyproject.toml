@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "pygbm" # name of the package must match the core folder name
+dynamic = ["version"]
+description = "A Python package for modeling brownian motion."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+    { name = "Charlie Warburton", email = "cw914@cam.ac.uk" }
+]
+keywords = ["differnital equations", "brownian motion", "stochastic processes"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Economists",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries"
+]
+
+# Runtime dependencies
+dependencies = [
+    "numpy",
+    "pandas"
+]
+
+[tool.setuptools_scm]
+write_to = "pygmy/version.py"  # Where to write the dynamic version
+
+[tool.setuptools.packages.find]
+where = ["."]
