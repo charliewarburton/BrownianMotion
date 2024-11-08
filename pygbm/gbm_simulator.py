@@ -1,4 +1,6 @@
 # gbm_simulator.py
+
+# TODO: Make run from command line with cli.py
 import numpy as np
 
 # Base class
@@ -12,7 +14,7 @@ class gbm_simulator:
 # Daughter Class
 class GBMSimulator(gbm_simulator):
     def __init__(self, y0, mu, sigma):
-        super().__init__(y0, mu, sigma)
+        super().__init__(y0, mu, sigma) # jumps to parent class and runs __init__ method
 
 
     def simulate_path(self, T, N):
